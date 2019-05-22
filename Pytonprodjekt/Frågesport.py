@@ -52,6 +52,9 @@ while antalF <11:
     Fråga = Fråga.replace('%29','')
     Rätt = Rätt.replace('%20',' ')
     Rätt = Rätt.replace('%2C','')
+    for items in range(len(Alt)):
+        if "%20" in Alt[items]:
+            Alt[items]= Alt[items].replace("%20"," ")
     # Alt = Alt.replace('%20',' ')
     
     Alt.append(Rätt)
