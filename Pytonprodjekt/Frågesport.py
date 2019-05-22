@@ -3,6 +3,7 @@ import requests
 import random
 
 antalF = 1
+cleanUp = 1
 points = 0
 l = randint(0,49)
 
@@ -55,7 +56,19 @@ while antalF <11:
     for items in range(len(Alt)):
         if "%20" in Alt[items]:
             Alt[items]= Alt[items].replace("%20"," ")
-    # Alt = Alt.replace('%20',' ')
+    for items in range(len(Alt)):
+        if "%21" in Alt[items]:
+            Alt[items]= Alt[items].replace("%21","")    
+    for items in range(len(Alt)):
+        if "%27" in Alt[items]:
+            Alt[items]= Alt[items].replace("%27","")
+    for items in range(len(Alt)):
+        if "%28" in Alt[items]:
+            Alt[items]= Alt[items].replace("%28","")
+    for items in range(len(Alt)):
+        if "%29" in Alt[items]:
+            Alt[items]= Alt[items].replace("%29","")
+
     
     Alt.append(Rätt)
     random.shuffle(Alt)
